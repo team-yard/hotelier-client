@@ -8,5 +8,27 @@
 
   function routerConfig($stateProvider) {
 
+    $stateProvider
+      .state({
+        name: 'staffLogin',
+        url: '/staffLogin',
+        templateUrl: 'views/staffLogin.template.html'
+      })
+
+      .state({
+        name: 'reservations',
+        url: '/reservations',
+        templateUrl: 'views/reservations.template.html'
+      })
+
+      .state({
+        name: 'guestList',
+        url: '/guestList',
+        templateUrl: 'views/allGuest.template.html'
+      });
+
+
+
+
   }
 }());
