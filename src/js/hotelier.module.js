@@ -25,6 +25,18 @@
         name: 'guestList',
         url: '/guestList',
         templateUrl: 'views/allGuest.template.html'
+      })
+
+      .state({
+        name: 'createGuest',
+        url: '/createGuest',
+        templateUrl: 'views/createGuest.template.html'
+      })
+
+      .state({
+        name: 'createReservation',
+        url: '/createReservation',
+        templateUrl: 'views/createReservations.template.html'
       });
 
 
