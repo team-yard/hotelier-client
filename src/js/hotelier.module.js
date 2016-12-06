@@ -6,7 +6,7 @@
 
   routerConfig.$inject=['$stateProvider'];
 
-  function routerConfig($stateProvider) {
+  function routerConfig() {
 
     $stateProvider
       .state({
