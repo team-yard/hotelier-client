@@ -20,6 +20,13 @@
         url: '/rooms',
         templateUrl: 'views/rooms-available.template.html'
 
+      })
+
+      .state({
+        name: 'confirmation',
+        url: '/confirmation',
+        templateUrl: 'views/confirmation.template.html'
+
       });
 
   }
