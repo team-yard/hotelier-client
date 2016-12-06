@@ -20,7 +20,7 @@
         url: '/rooms',
         templateUrl: 'views/rooms-available.template.html'
 
-      })
+      });
 
   }
 }());
