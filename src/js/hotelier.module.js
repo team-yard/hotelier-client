@@ -18,7 +18,7 @@
       .state({
         name: 'rooms-available',
         url: '/rooms',
-        templateUrl: 'views/rooms-avalable.template.html'
+        templateUrl: 'views/rooms-available.template.html'
 
       })
 
