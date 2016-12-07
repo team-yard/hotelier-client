@@ -15,8 +15,7 @@
         };
 
         /**
-         * get rooms
-         * @param {String}
+         * Get rooms from api call
          * @return {Promise}     the completed ajax call promise
          */
         function getRooms() {

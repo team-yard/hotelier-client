@@ -12,7 +12,7 @@
 
         this.rooms = [];
 
-        this.getRoom = function getRoom() { //getRooms or getRoom?
+        this.getRoom = function getRoom() { 
 
         };
 
