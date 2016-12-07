@@ -16,10 +16,10 @@
       })
 
       .state({
-        name: 'rooms-available',
+        name: 'roomsAvailable',
         url: '/rooms',
         templateUrl: 'views/rooms-available.template.html',
-        controller: 'RoomsAvailbleController',
+        controller: 'RoomsAvailableController',
         controllerAs: 'roomsAvailable'
 
       })
