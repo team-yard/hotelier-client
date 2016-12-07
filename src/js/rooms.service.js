@@ -11,7 +11,8 @@
 
 
         return {
-            getRooms: getRooms
+            getRooms: getRooms,
+            getRoom: getRoom
         };
 
         /**
@@ -28,6 +29,16 @@
 
                 return response.data;
             });
+        }
+
+        function getRoom() {
+          return $http ({
+            url: 'https://hotelier-api-iron.heroku.com/api/Rooms',
+            method: 'GET',
+            params: {
+              q: reservation.id
+            }
+          })
         }
     }
 
