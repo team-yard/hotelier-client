@@ -40,9 +40,30 @@
         name: 'createReservation',
         url: '/createReservation',
         templateUrl: 'views/createReservations.template.html'
+      })
+
+      .state({
+        name: 'home',
+        url: '',
+        templateUrl: 'views/guest.template.html'
+
+      })
+
+      .state({
+        name: 'roomsAvailable',
+        url: '/rooms',
+        templateUrl: 'views/rooms-available.template.html',
+        controller: 'RoomsAvailableController',
+        controllerAs: 'roomsAvailable'
+
+      })
+
+      .state({
+        name: 'confirmation',
+        url: '/confirmation',
+        templateUrl: 'views/confirmation.template.html'
+
       });
-
-
 
 
   }
