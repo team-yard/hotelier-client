@@ -1,13 +1,13 @@
 (function() {
   'use strict';
 
-  angular.module('hotlier')
+  angular.module('hotelier')
   .factory('AllReservationsService', AllReservationsService);
 
-  AllRerservationsService.$inject = ['$http'];
+  AllReservationsService.$inject = ['$http'];
 
-  function AllRerservationsService($http){
-    console.log('creating AllRerservationsService');
+  function AllReservationsService($http){
+    console.log('creating AllReservationsService');
 
     return {
       getReservations: getReservations
@@ -20,12 +20,13 @@
     */
     function getReservations(){
       return $http({
-        url:'https://hotelier-api-iron.herokuapp.com/api/',
-        method: 'GET /Reservations'
+        url:'https://hotelier-api-iron.herokuapp.com/api/Reservations',
+        method: 'GET'
       })
       .then(function onlyReturnData(response){
+        console.log(response.data);
+        return response;
 
-        return response.data;
 
       });
 

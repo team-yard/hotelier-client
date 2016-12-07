@@ -16,9 +16,12 @@
       })
 
       .state({
-        name: 'reservations',
+        name: 'allRes',
         url: '/reservations',
-        templateUrl: 'views/reservations.template.html'
+        templateUrl: 'views/reservations.template.html',
+        controller: 'AllReservationsController',
+        controllerAs: 'allRes'
+
       })
 
       .state({

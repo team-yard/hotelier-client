@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('hotlier')
+  angular.module('hotelier')
   .controller('AllReservationsController', AllReservationsController);
 
   AllReservationsController.$inject = [ 'AllReservationsService' ];
@@ -14,7 +14,7 @@
 
     this.reservations = [];
 
-    
+
     AllReservationsService.getReservations()
     .then(function successHandeler(data){
       console.log('Its Working', data);
