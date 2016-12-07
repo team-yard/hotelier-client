@@ -18,7 +18,9 @@
       .state({
         name: 'rooms-available',
         url: '/rooms',
-        templateUrl: 'views/rooms-available.template.html'
+        templateUrl: 'views/rooms-available.template.html',
+        controller: 'RoomsAvailbleController',
+        controllerAs: 'roomsAvailable'
 
       })
 
