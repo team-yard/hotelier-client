@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('hotlier')
-    .factory('AllReservationsService', AllReservationsService);
+  .factory('AllReservationsService', AllReservationsService);
 
   AllRerservationsService.$inject = ['$http'];
 
