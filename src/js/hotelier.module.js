@@ -12,7 +12,10 @@
       .state({
         name: 'staffLogin',
         url: '/staffLogin',
-        templateUrl: 'views/staffLogin.template.html'
+        templateUrl: 'views/staffLogin.template.html',
+        controller: 'LoginController',
+        controllerAs: 'staffLogin'
+
       })
 
       .state({
