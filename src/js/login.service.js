@@ -11,24 +11,25 @@
     console.log('creating LoginService');
 
     return {
-      addStaff: addStaff
+      staffLogin: staffLogin
     };
 
-
-    function addStaff(){
-
-    }
-
-
-
     /**
-    * search api for list of all reservations
-    * @return {Promise} the completed ajax call promise
-    */
-    function get(){
+     * [staffLogin description]
+     * @param  {[type]} staff [description]
+     * @return {[type]}       [description]
+     */
+    function staffLogin(staff){
       return $http({
-        url:'https://hotelier-api-iron.herokuapp.com/api/',
-        method: 'GET'
+        url:'https://hotelier-api-iron.herokuapp.com/api/Staffs/login',
+        data:{
+          email: staff.email,
+          password: staff.password
+        },
+        method: 'post',
+        headers: {
+          'Content-type': 'application/json'
+        }
       })
       .then(function onlyReturnData(response){
         console.log(response.data);
@@ -36,7 +37,6 @@
 
 
       });
-
 
     }
 

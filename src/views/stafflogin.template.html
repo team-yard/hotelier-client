@@ -1,11 +1,11 @@
 <p>Staff login view</p>
 
 <form>
-  <input type="text" name="" placeholder="Staff email">
+  <input type='text' name='' placeholder='Staff email'>
 
-  <input type="text" name="" placeholder="Password">
+  <input type='text' name='' placeholder='Password'>
 
-  <input type="submit" name="" value="Login">
+  <input type='submit' name='' value='Login'>
 
 </form>
 
@@ -13,12 +13,12 @@
 <p>If you need to create new login credentials please complete below form</p>
 
 
-<form ng-submit=''>
+<form name='staffer' ng-submit='staffer.$valid && login.staffLogin(login.staff)'>
 
-  <input ng-model='staffLogin.staff.name' type="text" name="" placeholder="Full Name">
-  <input ng-model='staffLogin.staff.email' type="text" name="" placeholder="Email Address">
-  <input ng-model='staffLogin.staff.password' type="text" name="" placeholder="Password">
-  <input ng-model='' type="submit" name="" value="Submit">
+  <input type='text' placeholder='Full Name'>
+  <input ng-model='login.staff.email' type='text' placeholder='Email Address'>
+  <input ng-model='login.staff.password' type='text' placeholder='Password'>
+  <input type='submit' name='' value='Submit'>
 
 
 

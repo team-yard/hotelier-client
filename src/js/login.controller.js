@@ -11,9 +11,10 @@
 
       this.staff = {};
 
-      function passStaff(staff){
-        LoginService.addStaff(staff);
-      }
+      this.staffLogin = function staffLogin(staff){
+        console.log(staff.email);
+        LoginService.staffLogin(staff);
+      };
 
     }
 }());
