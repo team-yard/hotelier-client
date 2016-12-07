@@ -39,6 +39,9 @@
               q: reservation.id
             }
           })
+          .then(function handleSuccess(response) {
+            return response.data;
+          })
         }
     }
 
