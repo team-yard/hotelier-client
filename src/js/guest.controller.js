@@ -9,9 +9,10 @@
     function GuestController(GuestService) {
       console.log('creating GuestController', GuestService);
 
-      this.guest = {};
+      this.newGuest = {};
 
       this.createGuest = function createGuest(guest) {
+        console.log('what in the world am i', guest);
         GuestService.createGuest(guest);
       };
 

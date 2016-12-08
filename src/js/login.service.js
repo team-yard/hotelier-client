@@ -20,6 +20,7 @@
      * @return {[type]}       [description]
      */
     function staffLogin(staff){
+      console.log('what am i?????????', staff);
       return $http({
         url:'https://hotelier-api-iron.herokuapp.com/api/Staffs/login',
         data:{

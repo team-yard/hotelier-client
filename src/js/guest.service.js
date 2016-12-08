@@ -7,16 +7,24 @@
     GuestService.$inject =['$http'];
 
     function GuestService($http) {
-      console.log('creating GuestService', $http);
 
       return {
         createGuest: createGuest
       };
 
-      function createGuest() {
+      function createGuest(guest) {
+        console.log('am i ettore?', guest);
         return $http({
-          url:'https://hotelier-api-iron.herokuapp.com/api//Guests',
-          method: 'GET'
+          url:'https://hotelier-api-iron.herokuapp.com/api/Guests',
+          data: {
+            fullName: guest.fullName,
+            email: guest.email,
+            phone: guest.phone
+          },
+          method: 'post',
+          headers: {
+            'Content-type': 'application/json'
+          }
         })
         .then(function successHandeler(reponse) {
           console.log(reponse);
