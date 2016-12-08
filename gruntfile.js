@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 
     clean: [ 'build/' ],
 
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -29,6 +30,16 @@ module.exports = function(grunt) {
           }
         ]
       },
+      img: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/',
+            src: 'img/**/*.*',
+            dest: 'build/'
+          }
+        ]
+      },
       vendorjs: {
         files: [
           {
@@ -47,20 +58,51 @@ module.exports = function(grunt) {
       },
     },
 
+    sass: {
+      allStyles: {
+        files: {
+          'build/css/styles.css': 'src/sass/main.scss'
+        }
+      }
+    },
+
     concat: {
       js: {
-        src: [ 'src/js/**/*.js' ],
+        src: [ 'src/js/hotelier.module.js', 'src/js/**/*.js' ],
         dest: 'build/js/app.js'
       }
-    }
+    },
+
+    watch: {
+         html: {
+           files: ['src/index.html', 'src/views/**'],
+           tasks: ['copy:html']
+         },
+         js : {
+           files: ['src/js/**/*.js'],
+           tasks: ['jshint', 'concat']
+         },
+
+         sass: {
+           files: ['src/sass/**/*.scss'],
+           tasks: ['sass']
+         },
+         images: {
+           files: ['src/img/**'],
+           tasks: ['copy:img']
+         }
+       }
+
 
   });
 
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'concat' ]);
+  grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'concat', 'sass' ]);
 };
