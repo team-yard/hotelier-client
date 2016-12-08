@@ -4,9 +4,9 @@
     angular.module('hotelier')
         .controller('RoomsAvailableController', RoomsAvailableController);
 
-    RoomsAvailableController.$inject = [ 'RoomsService' ];
+    RoomsAvailableController.$inject = [ '$stateParams','RoomsService' ];
 
-    function RoomsAvailableController(RoomsService) {
+    function RoomsAvailableController($stateParams, RoomsService) {
         console.log('creating the controller');
         var vm = this;
 
@@ -28,6 +28,13 @@
 
             });
 
+        RoomsService.getRoom($stateParams.id)
+        .then(function roomHandler(data) {
+            vm.singleRoom = data;
+        })
+        .catch(function roomError(xhr) {
+
+        });
     }
 
 })();
