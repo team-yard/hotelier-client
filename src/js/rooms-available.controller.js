@@ -12,15 +12,16 @@
 
         this.rooms = [];
 
-        this.getRoom = function getRoom() { 
+        this.getRoom = function getRoom() {
 
         };
 
         RoomsService.getRooms()
             .then(function successHandler(data) {
 
-                console.log(data);
-                vm.rooms = data.items;
+                console.log('controller', data);
+                vm.rooms = data;
+                console.log(vm.rooms, 'vm');
             })
             .catch(function failHandler(xhr) {
                 console.warn(xhr);

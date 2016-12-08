@@ -1,7 +1,9 @@
-<input type='text' value='Reservation ID'>
-<input type='submit' value='Submit'>
+<form name='reservation' ng-submit='reservation.$valid' && myscope.reservation(myscope.reservationDeets)>
+  <input type='text' name='token' placeholder='api token' ng-model='myscope.reservationDeets.token'>
+  <input type='submit' value='Submit'>
+</form>
 <ul>
   <li ng-repeat='room in roomsAvailable.rooms'>
-    Rooms
+    {{room}}
   </li>
 </ul>

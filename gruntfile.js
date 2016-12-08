@@ -24,7 +24,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/',
-            src: 'index.html',
+            src: '**/*.html',
             dest: 'build/'
           }
         ]
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
           },
           {
             expand: true,
-            cwd: 'node_modules/angular-ui-router',
+            cwd: 'node_modules/angular-ui-router/release',
             src: [ 'angular-ui-router.js' ],
             dest: 'build/js/'
           }

@@ -7,12 +7,16 @@
   routerConfig.$inject = ['$stateProvider'];
 
   function routerConfig($stateProvider) {
+  
 
     $stateProvider
       .state({
-        name: 'staffLogin',
+        name: 'login',
         url: '/staffLogin',
-        templateUrl: 'views/staffLogin.template.html'
+        templateUrl: 'views/staffLogin.template.html',
+        controller: 'LoginController',
+        controllerAs: 'login'
+
       })
 
       .state({
