@@ -14,7 +14,6 @@
 
     this.reservations = [];
 
-
     AllReservationsService.getReservations()
     .then(function successHandeler(data){
       console.log('Its Working', data);
@@ -23,6 +22,14 @@
     .catch(function failHandler(xhr){
       console.log(xhr);
     });
+
+    AllReservationsService.singleReservation(id)
+      .then(function handleReservationSuccess(data) {
+        vm.repo = data;
+      })
+      .catch(function handleReservationError(xhrError) {
+        console.warn(xhrError);
+      })
   }
 
 

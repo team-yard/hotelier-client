@@ -12,10 +12,6 @@
 
         this.rooms = [];
 
-        this.getRoom = function getRoom() {
-
-        };
-
         RoomsService.getRooms()
             .then(function successHandler(data) {
 
@@ -28,13 +24,6 @@
 
             });
 
-        RoomsService.getRoom($stateParams.id)
-        .then(function roomHandler(data) {
-            vm.singleRoom = data;
-        })
-        .catch(function roomError(xhr) {
-
-        });
     }
 
 })();
