@@ -13,16 +13,20 @@
     console.log(vm);
 
     this.reservations = [];
+    this.token = {};
 
 
-    AllReservationsService.getReservations()
+
+    this.getReservations = function getReservations(token){
+      AllReservationsService.getReservations(token)
     .then(function successHandeler(data){
       console.log('Its Working', data);
-      vm.reservations = data.items;
+      vm.reservations = data;
     })
     .catch(function failHandler(xhr){
       console.log(xhr);
     });
+  };
   }
 
 

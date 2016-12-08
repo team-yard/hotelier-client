@@ -1,1 +1,31 @@
 <p>All Reservation View</p>
+
+
+<form name='reserve' ng-submit='reserve.$valid && allRes.getReservations(allRes.token)'>
+
+  <input ng-model='allRes.token.id' type='text' placeholder='Token'>
+  <input type='submit' name='' value='Submit'>
+
+</form>
+
+
+<!-- <ul>
+  <li ng-repeat='reservation in allRes.reservations'></li>
+  {{reservation}}
+</ul> -->
+
+<ul>
+  <li class="panel panel-success list-unstyled">
+      <header class="panel-heading">{{Checkin date}} </header>
+
+      <article class="panel-body">Guest</article>
+
+  </li>
+</ul>
+
+
+<p >Checkin date </p>
+<p>Room Number</p>
+<p></p>
+<p>Number of guests</p>
+<p>Checkout date</p>
