@@ -34,7 +34,7 @@
        * Upon its call, getRoom pulls information about A SINGLE ROOM. Upon completion, the response
        * from angular is transformed to return the data in the promise callback.
        * @param {Number} id Reservation ID number that is provdided from the form in HTML.
-       * @return {Promise} 
+       * @return {Promise}
        */
         function getRoom(id) {
             return $http ({

@@ -26,11 +26,7 @@
       .then(function onlyReturnData(response){
         console.log(response.data);
         return response;
-
-
       });
-
-
     }
 
 
