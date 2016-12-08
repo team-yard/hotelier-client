@@ -19,14 +19,14 @@
 
     this.getReservations = function getReservations(token){
       AllReservationsService.getReservations(token)
-    .then(function successHandeler(data){
-      console.log('Its Working', data);
-      vm.reservations = data;
-    })
-    .catch(function failHandler(xhr){
-      console.log(xhr);
-    });
-  };
+      .then(function successHandeler(data){
+        console.log('Its Working', data);
+        vm.reservations = data;
+      })
+      .catch(function failHandler(xhr){
+        console.log(xhr);
+      });
+    };
   }
 
 
