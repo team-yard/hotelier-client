@@ -4,10 +4,10 @@
   angular.module('hotelier',['ui.router'])
     .config(routerConfig);
 
-  routerConfig.$inject = ['$stateProvider']; //get url router provider
+  routerConfig.$inject = ['$stateProvider'];
 
   function routerConfig($stateProvider) {
-    //url router provider goes here
+  
 
     $stateProvider
       .state({
