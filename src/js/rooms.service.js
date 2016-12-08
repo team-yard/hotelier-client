@@ -30,13 +30,18 @@
                 return response.data;
             });
         }
-
-        function getRoom() {
-          return $http ({
-            url: 'https://hotelier-api-iron.heroku.com/api/Rooms',
-            method: 'GET',
-            params: {
-              q: reservation.id
+      /**
+       * Upon its call, getRoom pulls information about A SINGLE ROOM. Upon completion, the response
+       * from angular is transformed to return the data in the promise callback.
+       * @param {Number} id Reservation ID number that is provdided from the form in HTML.
+       * @return {Promise} 
+       */
+        function getRoom(id) {
+            return $http ({
+              url: 'https://hotelier-api-iron.heroku.com/api/Rooms/:id',
+              method: 'GET',
+              params: {
+                q: id
             }
           })
           .then(function handleSuccess(response) {
