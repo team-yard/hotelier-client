@@ -17,7 +17,6 @@
        * @return {Promise}       the completed ajax call promise
        */
       function createGuest(guest) {
-        console.log('am i ettore?', guest);
         return $http({
           url:'https://hotelier-api-iron.herokuapp.com/api/Guests',
           data: {
@@ -27,12 +26,11 @@
           },
           method: 'post',
           headers: {
-            'Content-type': 'application/json',
-            'Authorization' : 'token'
+            'Authorization' : guest.token,
+            'Content-type': 'application/json'
           }
         })
         .then(function successHandeler(reponse) {
-          console.log(reponse);
           return reponse;
         });
       }

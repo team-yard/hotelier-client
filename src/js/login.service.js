@@ -8,19 +8,16 @@
   LoginService.$inject = ['$http'];
 
   function LoginService($http){
-    console.log('creating LoginService');
 
     return {
       staffLogin: staffLogin
     };
-
     /**
-     * [staffLogin description]
-     * @param  {[type]} staff [description]
-     * @return {[type]}       [description]
+     * Allows staff to log in with email and password.
+     * @param  {string} staff email and password
+     * @return {promise}       the completed ajax call promise.
      */
     function staffLogin(staff){
-      console.log('what am i?????????', staff);
       return $http({
         url:'https://hotelier-api-iron.herokuapp.com/api/Staffs/login',
         data:{
@@ -33,9 +30,7 @@
         }
       })
       .then(function onlyReturnData(response){
-        console.log(response.data);
         return response;
-
 
       });
 
