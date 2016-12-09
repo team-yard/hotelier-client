@@ -5,14 +5,15 @@
     .controller('LoginController', LoginController);
 
 
-    LoginController.$inject = [ 'LoginService' ];
+    LoginController.$inject = [ '$state', 'LoginService' ];
 
-    function LoginController(LoginService){
+    function LoginController($state, LoginService){
 
       this.staff = {};
 
       this.staffLogin = function staffLogin(staff){
         LoginService.staffLogin(staff);
+        $state.go('allRes');
       };
 
     }
