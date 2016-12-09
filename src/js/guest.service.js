@@ -4,9 +4,9 @@
   angular.module('hotelier')
     .factory('GuestService', GuestService);
 
-    GuestService.$inject =['$http'];
+    GuestService.$inject =['$http', 'LoginService'];
 
-    function GuestService($http) {
+    function GuestService($http, LoginService) {
 
       return {
         createGuest: createGuest
@@ -26,7 +26,7 @@
           },
           method: 'post',
           headers: {
-            'Authorization' : guest.token,
+            'Authorization' : LoginService.isLoggedIn(),
             'Content-type': 'application/json'
           }
         })
