@@ -14,7 +14,6 @@
 
     this.reservations = [];
 
-
       AllReservationsService.getReservations()
       .then(function successHandeler(data){
         console.log('Its Working', data);

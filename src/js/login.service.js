@@ -9,8 +9,11 @@
 
   function LoginService($http){
 
+  var token;
+
     return {
-      staffLogin: staffLogin
+      staffLogin: staffLogin,
+      isLoggedIn: isLoggedIn
     };
     /**
      * Allows staff to log in with email and password.
@@ -30,18 +33,18 @@
         }
       })
       .then(function onlyReturnData(response){
+        token=response.data.id;
         return response;
-
       });
-
     }
+    /**
+     * Stores the token into local storage once the user
+     * logs in.
+     * @return  {String} token Unique token to facilitate login
+     */
 
-
+     function isLoggedIn() {
+       return token;
+     }
   }
-
-
-
-
-
-
 }());
