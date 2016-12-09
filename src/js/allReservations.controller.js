@@ -12,6 +12,9 @@
     var vm = this;
     console.log(vm);
 
+
+    this.resNumber = '';
+
     this.reservations = [];
 
       AllReservationsService.getReservations()
@@ -22,14 +25,5 @@
       .catch(function failHandler(xhr){
         console.log(xhr);
       });
-
-      AllReservationsService.singleReservation()
-        .then(function successHandler(data) {
-          console.log('single success', data);
-          vm.singleReservation = data;
-        })
-        .catch(function failHandler(xhr){
-          console.log(xhr);
-        });
   }
 }());

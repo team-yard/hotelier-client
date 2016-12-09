@@ -1,5 +1,5 @@
-<form name='reservation' ng-submit='reservation.$valid' && myscope.reservation(myscope.reservationDeets)>
-  <input type='text' name='token' placeholder='api token' ng-model='myscope.reservationDeets.token'>
+<form name='reservation' ng-submit='reservation.$valid && roomsAvailable.singleReservation(singleReservation.resNumber.id)'>
+  <input type='text' name='reservation-number' placeholder='Reservation ID#' ng-model='roomsAvailable.resNumber.id'>
   <input type='submit' value='Submit'>
 </form>
 <ul>

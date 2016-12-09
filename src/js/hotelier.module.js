@@ -65,9 +65,11 @@
       })
 
       .state({
-        name: 'confirmation',
-        url: '/confirmation',
-        templateUrl: 'views/confirmation.template.html'
+        name: 'singleReservation',
+        url: '/singleReservation',
+        templateUrl: 'views/single.reservation.view.template.html',
+        controller: 'allReservationsController',
+        controllerAs: 'singleReservation'
 
       });
 

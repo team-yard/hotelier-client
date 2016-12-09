@@ -43,7 +43,6 @@
      * Upon completion, the responsefrom angular is transformed to return the data in t
      * he promise callback.
      * @param {Number} id Reservation ID number that is provdided from the form in HTML.
-     * @param {Number} token The token will be created on form submission.
      * @return {Promise}
      */
 
