@@ -14,22 +14,15 @@
 
     this.reservations = [];
 
-    AllReservationsService.getReservations()
-    .then(function successHandeler(data){
-      console.log('Its Working', data);
-      vm.reservations = data.items;
-    })
-    .catch(function failHandler(xhr){
-      console.log(xhr);
-    });
-
-    AllReservationsService.singleReservation(id)
-      .then(function handleReservationSuccess(data) {
-        vm.repo = data;
+      AllReservationsService.getReservations()
+      .then(function successHandeler(data){
+        console.log('Its Working', data);
+        vm.reservations = data;
       })
-      .catch(function handleReservationError(xhrError) {
-        console.warn(xhrError);
-      })
+      .catch(function failHandler(xhr){
+        console.log(xhr);
+      });
+>>>>>>> master
   }
 
 

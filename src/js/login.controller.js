@@ -12,7 +12,6 @@
       this.staff = {};
 
       this.staffLogin = function staffLogin(staff){
-        console.log(staff.email);
         LoginService.staffLogin(staff);
       };
 
