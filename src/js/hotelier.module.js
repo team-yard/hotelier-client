@@ -35,9 +35,11 @@
       })
 
       .state({
-        name: 'createGuest',
-        url: '/createGuest',
-        templateUrl: 'views/createGuest.template.html'
+        name: 'guest',
+        url: '/guest',
+        templateUrl: 'views/createGuest.template.html',
+        controller: 'GuestController',
+        controllerAs: 'guest'
       })
 
       .state({
