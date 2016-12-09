@@ -4,11 +4,10 @@
   angular.module('hotelier')
   .factory('AllReservationsService', AllReservationsService);
 
-  AllReservationsService.$inject = ['$http'];
+  AllReservationsService.$inject = ['$http', 'LoginService'];
 
-  function AllReservationsService($http){
+  function AllReservationsService($http, LoginService){
     console.log('creating AllReservationsService');
-
     return {
       getReservations: getReservations,
       singleReservation: singleReservation
@@ -20,6 +19,8 @@
     * @return {Promise} the completed ajax call promise
     */
     function getReservations(){
+      console.log('token?', LoginService.isLoggedIn());
+
       return $http({
         url:'https://hotelier-api-iron.herokuapp.com/api/Reservations',
         method: 'GET',

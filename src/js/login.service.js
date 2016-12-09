@@ -33,10 +33,8 @@
         }
       })
       .then(function onlyReturnData(response){
-        console.log(response.data);
-        // save the token!!!
+        token=response.data.id;
         return response;
-
       });
     }
     /**
