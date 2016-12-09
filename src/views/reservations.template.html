@@ -4,13 +4,11 @@
 <ul>
   <li class="panel panel-info list-unstyled" ng-repeat="reservation in allRes.reservations">
     <header class="panel-heading">
-      <p>Reservation Date {{reservation.checkinDate}}</p>
-      <p>- Room #{{reservation.room.number}}</p>
+      <h4>Reservation Date {{reservation.checkinDate | date: 'M/dd/yyyy}} - Room #{{reservation.room.number}}</h4>
     </header>
     <section class="panel-body">
-      <p>Guest: {{reservation.guest.fullName}}</p>
-      <p>({{reservation.numberOfGuests}})</p>
-      <p>Check out: {{reservation.checkoutDate}}</p>
+      <p>Guest: {{reservation.guest.fullName}} ({{reservation.numberOfGuests}})</p>
+      <p>Check out: {{reservation.checkoutDate | date: 'M/dd/yyyy}}</p>
       <button type="button" name="button">Delete</button>
     </section>
   </li>
