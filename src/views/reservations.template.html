@@ -5,11 +5,12 @@
   <li class="panel panel-info list-unstyled" ng-repeat="reservation in allRes.reservations">
     <header class="panel-heading">
       <p>Reservation Date {{reservation.checkinDate}}</p>
-      <p>Room#</p>
+      <p>- Room #{{reservation.room.number}}</p>
     </header>
     <section class="panel-body">
-      <p>Guest:</p>
-      <p>Check out:</p>
+      <p>Guest: {{reservation.guest.fullName}}</p>
+      <p>({{reservation.numberOfGuests}})</p>
+      <p>Check out: {{reservation.checkoutDate}}</p>
       <button type="button" name="button">Delete</button>
     </section>
   </li>
