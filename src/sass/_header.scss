@@ -1,27 +1,33 @@
 header {
-background-image: url('../img/red-wall.jpg');
-background-size:contain;
-color: #ffffff;
-}
-h1 {
-  margin: 0;
-  padding-top: 15px;
-}
 
-h2 {
-  font-size: 1em;
-}
+    &.banner{
+      background-image: url('../img/red-wall.jpg');
+      background-size:contain;
+      color: #ffffff;
+    }
 
-ul {
-  list-style: none;
-  padding:0;
-}
 
-a {
-  color: white;
-}
+    h1 {
+      margin: 0;
+      padding-top: 15px;
+    }
 
-li {
-  padding-bottom: 10px;
-  display: inline;
+    h2 {
+      font-size: 1em;
+    }
+
+    ul {
+      list-style: none;
+      padding:0;
+    }
+
+    a {
+      color: white;
+    }
+
+    li {
+      padding-bottom: 10px;
+      display: inline;
+    }
+
 }
