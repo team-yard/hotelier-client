@@ -19,7 +19,6 @@
     * @return {Promise} the completed ajax call promise
     */
     function getReservations(){
-      // console.log('token?', LoginService.isLoggedIn());
       return $http({
         url:'https://hotelier-api-iron.herokuapp.com/api/Reservations',
         method: 'GET',
