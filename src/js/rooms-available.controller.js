@@ -12,6 +12,7 @@
 
         this.rooms = [];
 
+        
         this.getRoom = function getRoom() {
 
         };
