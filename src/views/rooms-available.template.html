@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 <form name='reservation' ng-submit='reservation.$valid && roomsAvailable.singleReservation(singleReservation.resNumber.id)'>
   <input type='text' name='reservation-number' placeholder='Reservation ID#' ng-model='roomsAvailable.resNumber.id'>
   <input type='submit' value='Submit'>
 </form>
-<ul>
-  <li ng-repeat='room in roomsAvailable.rooms'>
-    {{room}}
+<ul class='allrooms'>
+  <li class='eachroom' ng-repeat='room in roomsAvailable.rooms'>
+     <h3 class='roomborders'>Room {{room.number}}</h3>
+
+      <h4>Maximum Occupancy {{room.maxOccupancy}}</h4>
   </li>
 </ul>
