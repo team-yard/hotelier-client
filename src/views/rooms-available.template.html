@@ -1,9 +1,11 @@
-<form name='reservation' ng-submit='reservation.$valid' && myscope.reservation(myscope.reservationDeets)>
-  <input type='text' name='token' placeholder='api token' ng-model='myscope.reservationDeets.token'>
-  <input type='submit' value='Submit'>
+<form class= 'reservationID' name='reservation' ng-submit='reservation.$valid' && myscope.reservation(myscope.reservationDeets)>
+  <input type='text' name='token' placeholder='Reservation ID' ng-model='myscope.reservationDeets.token'>
+  <input type='submit' value='Find reservation'>
 </form>
-<ul>
-  <li ng-repeat='room in roomsAvailable.rooms'>
-    {{room}}
+<ul class='allrooms'>
+  <li class='eachroom' ng-repeat='room in roomsAvailable.rooms'>
+     <h3 class='roomborders'>Room {{room.number}}</h3>
+
+      <h4>Maximum Occupancy {{room.maxOccupancy}}</h4>
   </li>
 </ul>
