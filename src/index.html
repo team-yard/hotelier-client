@@ -12,19 +12,19 @@
 
     </head>
     <body>
-      <header>
+      <header class='banner'>
         <h1>Hotelier</h1>
         <h2>Easier reservations for tommorow, today.</h2>
 
 
-        <nav class='navbar navbar-inverse' role="navigation">
+        <nav ng-controller='NavController as nav' class='navbar navbar-inverse' role="navigation">
          <ul>
            <li><a ui-sref='home'>Home</a></li>
            <li><a ui-sref='roomsAvailable'>Room Availability</a></li>
-           <li><a ui-sref='guest'>Create Guest</a></li>
-           <li><a ui-sref='createReservation'>Create Reservation</a></li>
-           <li><a ui-sref='allRes'>Reservations</a></li>
-           <li><a ui-sref='guestList'>Guest List</a></li>
+           <li><a ng-if='nav.isLoggedIn()' ui-sref='guest'>Create Guest</a></li>
+           <li><a ng-if='nav.isLoggedIn()'ui-sref='createReservation'>Create Reservation</a></li>
+           <li><a ng-if='nav.isLoggedIn()'ui-sref='allRes'>Reservations</a></li>
+           <li><a ng-if='nav.isLoggedIn()'ui-sref='guestList'>Guest List</a></li>
          </ul>
        </nav>
      </header>
