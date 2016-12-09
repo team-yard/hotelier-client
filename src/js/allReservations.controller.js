@@ -22,7 +22,6 @@
       .catch(function failHandler(xhr){
         console.log(xhr);
       });
->>>>>>> master
   }
 
 
