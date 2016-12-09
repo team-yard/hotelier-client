@@ -18,13 +18,12 @@
     * search api for list of all reservations
     * @return {Promise} the completed ajax call promise
     */
-    function getReservations(token){
-      var id = token.id;
+    function getReservations(){
       return $http({
         url:'https://hotelier-api-iron.herokuapp.com/api/Reservations',
         method: 'GET',
         headers:{
-          Authorization: id
+          Authorization: 'qwhrh6Cy9evoBz6cC62NAXJv5107jIUde5i5nbW2CkunQHlpWFLlSBpDfnRf5dU8'
         }
       })
       .then(function onlyReturnData(response){
@@ -33,7 +32,7 @@
 
 
       });
-      
+
 
     }
 
