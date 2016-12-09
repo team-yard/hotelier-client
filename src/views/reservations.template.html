@@ -1,15 +1,13 @@
-<p>All Reservation View</p>
+<p>Upcoming Reservations</p>
 
 
 <ul>
   <li class="panel panel-info list-unstyled" ng-repeat="reservation in allRes.reservations">
-    <header class="panel-heading">
-      <h4>Reservation Date {{reservation.checkinDate | date: 'M/dd/yyyy}} - Room #{{reservation.room.number}}</h4>
-    </header>
-    <section class="panel-body">
-      <p>Guest: {{reservation.guest.fullName}} ({{reservation.numberOfGuests}})</p>
-      <p>Check out: {{reservation.checkoutDate | date: 'M/dd/yyyy}}</p>
-      <button type="button" name="button">Delete</button>
-    </section>
+      <h5 class="panel-heading">Reservation Date {{reservation.checkinDate | date: 'M/dd/yyyy'}} - Room #{{reservation.room.number}}</h5>
+        <section class="panel-body">
+          <p>Guest: {{reservation.guest.fullName}} ({{reservation.numberOfGuests}})</p>
+          <p>Check out: {{reservation.checkoutDate}}</p>
+          <button type="button" name="button">Delete</button>
+        </section>
   </li>
 </ul>
