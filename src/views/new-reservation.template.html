@@ -1,7 +1,7 @@
-<h1>Create New Reservation</h1>
+<h3>Create New Reservation</h3>
 
 
-<form name="newResForm" ng-submit=" newResForm.$valid && newRes.callCreateRes(newRes.newReservation)">
+<form class='newreservation' name="newResForm" ng-submit=" newResForm.$valid && newRes.callCreateRes(newRes.newReservation)">
 
   <label for='check-in'>Check-in Date</label>
   <input ng-model='newRes.newReservation.checkinDate' type='date' name='checkinDate' id='check-in'>
@@ -18,5 +18,5 @@
   <label for='roomID'>Room ID</label>
   <input ng-model='newRes.newReservation.roomId' type='text' name='roomId' id='roomID'>
 
-  <button class='btn btn-info' type='submit' name='Make Reservation' value='Submit'></button>
+  <input class='btn btn-info' type='submit' name='Make Reservation' value='Submit'></input>
 </form>
