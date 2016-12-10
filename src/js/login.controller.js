@@ -13,7 +13,7 @@
 
       this.staffLogin = function staffLogin(staff){
         LoginService.staffLogin(staff);
-        $state.go('allRes');
+          $state.go('allRes');
       };
 
     }

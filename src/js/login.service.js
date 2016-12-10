@@ -8,6 +8,7 @@
   LoginService.$inject = ['$http'];
 
   function LoginService($http){
+    console.log('creating me');
 
   var token;
 
