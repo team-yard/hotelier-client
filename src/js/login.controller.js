@@ -17,7 +17,6 @@
           $state.go('allRes');
         });
 
-
       };
 
     }
