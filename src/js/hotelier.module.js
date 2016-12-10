@@ -24,14 +24,16 @@
         url: '/reservations',
         templateUrl: 'views/reservations.template.html',
         controller: 'AllReservationsController',
-        controllerAs: 'allRes'
+        controllerAs: 'allRes',
+        doYouNeedToBeLoggedInForThisState: true
 
       })
 
       .state({
         name: 'guestList',
         url: '/guestList',
-        templateUrl: 'views/allGuest.template.html'
+        templateUrl: 'views/allGuest.template.html',
+        doYouNeedToBeLoggedInForThisState: true
       })
 
       .state({
@@ -39,13 +41,15 @@
         url: '/guest',
         templateUrl: 'views/createGuest.template.html',
         controller: 'GuestController',
-        controllerAs: 'guest'
+        controllerAs: 'guest',
+        doYouNeedToBeLoggedInForThisState: true
       })
 
       .state({
         name: 'createReservation',
         url: '/createReservation',
-        templateUrl: 'views/createReservations.template.html'
+        templateUrl: 'views/createReservations.template.html',
+        doYouNeedToBeLoggedInForThisState: true
       })
 
       .state({
@@ -72,7 +76,6 @@
         controllerAs: 'singleReservation'
 
       });
-
-
   }
+
 }());
