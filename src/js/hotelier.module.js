@@ -4,12 +4,22 @@
   angular.module('hotelier',['ui.router'])
     .config(routerConfig);
 
-  routerConfig.$inject = ['$stateProvider'];
+  routerConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-  function routerConfig($stateProvider) {
+  function routerConfig($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.when('', '/');
 
 
     $stateProvider
+
+    .state({
+      name: 'home',
+      url: '/',
+      templateUrl: 'views/guest.template.html'
+
+    })
+
       .state({
         name: 'login',
         url: '/staffLogin',
@@ -50,13 +60,6 @@
         url: '/createReservation',
         templateUrl: 'views/createReservations.template.html',
         doYouNeedToBeLoggedInForThisState: true
-      })
-
-      .state({
-        name: 'home',
-        url: '',
-        templateUrl: 'views/guest.template.html'
-
       })
 
       .state({
