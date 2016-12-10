@@ -23,8 +23,8 @@
        url:'https://hotelier-api-iron.herokuapp.com/api/Reservations',
        data: {
          checkinDate: reservation.checkinDate,
-         checkoutDate: reservation.email,
-         numberOfGuests: reservation.phone,
+         checkoutDate: reservation.checkoutDate,
+         numberOfGuests: reservation.numberOfGuests,
          guestId: reservation.guestId,
          roomId: reservation.roomId
        },
