@@ -46,9 +46,11 @@
       })
 
       .state({
-        name: 'createReservation',
-        url: '/createReservation',
-        templateUrl: 'views/createReservations.template.html',
+        name: 'createreservation',
+        url: '/createreservation',
+        templateUrl: 'views/new-reservation.template.html',
+        controller: 'NewReservationController',
+        controllerAs: 'newRes',
         doYouNeedToBeLoggedInForThisState: true
       })
 
@@ -74,6 +76,7 @@
         templateUrl: 'views/confirmation.template.html'
 
       });
+
   }
 
 }());
