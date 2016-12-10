@@ -7,7 +7,7 @@
   NewReservationService.$inject = ['$http', 'LoginService'];
 
   function NewReservationService($http, LoginService){
-    console.log('creating New ReservationService');
+
     return {
       createReservation: createReservation,
 
