@@ -20,7 +20,7 @@
          */
         function getRooms() {
             return $http({
-                url: 'https://hotelier-api-iron.herokuapp.com/api/Rooms',
+                url: 'https://hotelier-api-yard.herokuapp.com/api/Rooms',
                 method: 'GET'
             })
             .then(function onlyReturnData(response) {

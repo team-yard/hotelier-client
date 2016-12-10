@@ -25,8 +25,8 @@
 
             });
 
-        this.singleReservation = function singleReservation(id) {
-          $state.go('singleReservation', {id: id});
+        this.singleReservation = function singleReservation(ids) {
+          $state.go('singleReservation', {id: ids});
 
         };
     }

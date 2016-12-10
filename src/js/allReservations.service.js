@@ -20,19 +20,16 @@
     */
     function getReservations(){
       return $http({
-        url:'https://hotelier-api-iron.herokuapp.com/api/Reservations',
+        url:'https://hotelier-api-yard.herokuapp.com/api/Reservations',
         method: 'GET',
         headers:{
           Authorization: LoginService.isLoggedIn(),
         }
       })
       .then(function onlyReturnData(response){
-        console.log(response.data);
+        console.log('hello do i even get here?????', response.data);
 
         return response.data;
-
-
-
       });
     }
 
@@ -45,18 +42,17 @@
      */
 
       function singleReservation(id) {
-          return $http ({
-            url: 'https://hotelier-api-iron.heroku.com/api/Reservations/' + id,
-            method: 'GET'
+          return $http({
+            url: 'https://hotelier-api-yard.heroku.com/api/Reservations/' + id,
+            method: 'GET',
+            headers: {
+              Authorization: LoginService.isLoggedIn(),
+            }
         })
         .then(function handleSuccess(response) {
-          console.log("helloooo!");
+          console.log("helloooo!", response);
           return response.data;
         });
       }
-
-
   }
-
-
 }());

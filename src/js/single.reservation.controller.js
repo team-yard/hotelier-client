@@ -4,19 +4,19 @@
   angular.module('hotelier')
     .controller('SingleReservationController', SingleReservationController);
 
-    SingleReservationController.$inject = ['$stateParams', '$state', 'AllReservationsService'];
+    SingleReservationController.$inject = ['$stateParams', 'AllReservationsService'];
 
-    function SingleReservationController($stateParams, $state, AllReservationsService) {
+    function SingleReservationController($stateParams, AllReservationsService) {
 
+      console.log("single res ctrl", $stateParams.id);
       var vm = this;
       this.singleReservation = {};
 
-      AllReservationsService.singleReservation(id)
-        .then(function successHandler(data) {
-          console.log('single success', data);
-          console.log(id);
-          vm.singleReservation = data;
-          $state.go('singleReservation');
+      AllReservationsService.singleReservation($stateParams.id)
+        .then(function successHandler(response) {
+          console.log('single success', response);
+          vm.singleReservation = response.data;
+          // $state.go('singleReservation');
         })
         .catch(function failHandler(xhr){
           console.log(xhr);
