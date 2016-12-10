@@ -1,4 +1,4 @@
-<form name='reservation' ng-submit='reservation.$valid && roomsAvailable.singleReservation(singleReservation.resNumber.id)'>
+<form name='reservation' ng-submit='reservation.$valid && roomsAvailable.singleReservation(roomsAvailable.resNumber.id)'>
   <input type='text' name='reservation-number' placeholder='Reservation ID#' ng-model='roomsAvailable.resNumber.id'>
   <input type='submit' value='Submit'>
 </form>

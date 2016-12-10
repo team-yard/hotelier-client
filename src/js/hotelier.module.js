@@ -66,9 +66,9 @@
 
       .state({
         name: 'singleReservation',
-        url: '/singleReservation',
+        url: '/singleReservation/:id',
         templateUrl: 'views/single.reservation.view.template.html',
-        controller: 'allReservationsController',
+        controller: 'singleReservationController',
         controllerAs: 'singleReservation'
 
       });
