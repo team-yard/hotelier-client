@@ -11,7 +11,7 @@
 
       this.newGuest = {};
 
-      this.callCreateRes = function callCreateRes(guest) {
+      this.createGuest = function createGuest(guest) {
         console.log('what in the world am i', guest);
         GuestService.createGuest(guest);
       };
