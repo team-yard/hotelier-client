@@ -12,8 +12,12 @@
       this.staff = {};
 
       this.staffLogin = function staffLogin(staff){
-        LoginService.staffLogin(staff);
-        $state.go('allRes');
+        LoginService.staffLogin(staff)
+        .then(function successHandler(){
+          $state.go('allRes');
+        });
+
+
       };
 
     }
