@@ -1,3 +1,9 @@
+.navbar-inverse{
+  background-color: #b0b0b6;
+  border-color: #ffffff;
+}
+
+
 header {
 
     &.banner{
@@ -28,6 +34,7 @@ header {
     li {
       padding-bottom: 10px;
       display: inline;
+      margin-left: 5px;
     }
 
 }
