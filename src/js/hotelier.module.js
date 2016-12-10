@@ -10,6 +10,14 @@
 
 
     $stateProvider
+
+      .state({
+        name: 'home',
+        url: '',
+        templateUrl: 'views/guest.template.html'
+
+      })
+
       .state({
         name: 'login',
         url: '/staffLogin',
@@ -52,13 +60,6 @@
         controller: 'NewReservationController',
         controllerAs: 'newRes',
         doYouNeedToBeLoggedInForThisState: true
-      })
-
-      .state({
-        name: 'home',
-        url: '',
-        templateUrl: 'views/guest.template.html'
-
       })
 
       .state({
