@@ -44,7 +44,7 @@
      */
 
      function isLoggedIn() {
-       return !!token;
+       return token;
      }
   }
 }());
