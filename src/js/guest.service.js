@@ -18,7 +18,7 @@
        */
       function createGuest(guest) {
         return $http({
-          url:'https://hotelier-api-iron.herokuapp.com/api/Guests',
+          url:'https://hotelier-api-yard.herokuapp.com/api/Guests',
           data: {
             fullName: guest.fullName,
             email: guest.email,

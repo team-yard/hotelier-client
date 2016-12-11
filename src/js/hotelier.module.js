@@ -2,7 +2,18 @@
   'use strict';
 
   angular.module('hotelier',['ui.router'])
-    .config(routerConfig);
+    .config(routerConfig)
+    .config(killPreflight);
+
+
+  killPreflight.$inject = ['$httpProvider'];
+  function killPreflight($httpProvider) {
+    console.log('killing preflight requests');
+    $httpProvider.defaults.headers.common = {};
+    $httpProvider.defaults.headers.post = {};
+    $httpProvider.defaults.headers.get = {};
+    $httpProvider.defaults.headers.delete = {};
+  }
 
   routerConfig.$inject = ['$stateProvider'];
 
@@ -72,9 +83,11 @@
       })
 
       .state({
-        name: 'confirmation',
-        url: '/confirmation',
-        templateUrl: 'views/confirmation.template.html'
+        name: 'singleReservation',
+        url: '/singleReservation/:id',
+        templateUrl: 'views/single.reservation.view.template.html',
+        controller: 'SingleReservationController',
+        controllerAs: 'singleReservation'
 
       });
 

@@ -23,7 +23,7 @@
      */
     function staffLogin(staff){
       return $http({
-        url:'https://hotelier-api-iron.herokuapp.com/api/Staffs/login',
+        url:'https://hotelier-api-yard.herokuapp.com/api/Staffs/login',
         data:{
           email: staff.email,
           password: staff.password

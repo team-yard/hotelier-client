@@ -12,6 +12,9 @@
     var vm = this;
     console.log(vm);
 
+
+    this.resNumber = '';
+
     this.reservations = [];
 
       AllReservationsService.getReservations()
@@ -23,7 +26,4 @@
         console.log(xhr);
       });
   }
-
-
-
 }());
