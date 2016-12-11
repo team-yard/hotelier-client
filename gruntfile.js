@@ -145,5 +145,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', [ 'clean', 'karma', 'jshint', 'copy', 'concat', 'sass' ]);
+  grunt.registerTask('default', [ 'clean',  'jshint', 'copy', 'concat', 'sass' ]);
 };
