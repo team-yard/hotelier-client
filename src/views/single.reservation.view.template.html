@@ -1,13 +1,13 @@
 <h2>Reservation Number: </h2>
 <section>
   <aside>
-    <cite>Name: </cite>
-    <p>Email: </p>
+    <cite>Name: {{singleReservation.singleReservation.guest.fullName}}</cite>
+    <p>Email: {{singleReservation.singleReservation.guest}}</p>
   </aside>
     <aside>
-      <h3>Room # </h3>
+      <h3>Room # {{singleReservation.singleReservation.room.number}} </h3>
       <p>Max Occupancy: </p>
     </aside>
 </section>
-<p>Check-In Date: </p>
-<p>Check-Out Date: </p>
+<p>Check-In Date: {{singleReservation.singleReservation.reservation.checkinDate}}</p>
+<p>Check-Out Date: {{singleReservation.singleReservation.reservation.checkoutDate}}</p>

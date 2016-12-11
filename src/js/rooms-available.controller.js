@@ -4,11 +4,12 @@
     angular.module('hotelier')
         .controller('RoomsAvailableController', RoomsAvailableController);
 
-    RoomsAvailableController.$inject = [ '$stateParams','RoomsService' ];
+    RoomsAvailableController.$inject = [ '$stateParams', '$state', 'RoomsService' ];
 
-    function RoomsAvailableController($stateParams, RoomsService) {
+    function RoomsAvailableController($stateParams, $state, RoomsService) {
         console.log('creating the controller');
         var vm = this;
+        this.resNumber = {};
 
         this.rooms = [];
 
@@ -24,6 +25,10 @@
 
             });
 
+        this.singleReservation = function singleReservation(ids) {
+          $state.go('singleReservation', {id: ids});
+
+        };
     }
 
 })();

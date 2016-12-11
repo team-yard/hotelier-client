@@ -90,6 +90,46 @@ module.exports = function(grunt) {
          images: {
            files: ['src/img/**'],
            tasks: ['copy:img']
+         },
+
+         test: {
+           files: [ 'test/specs/**/*.js' ],
+           tasks: [ 'test' ]
+         }
+       },
+
+       karma: {
+         options: {
+           frameworks: ['mocha', 'chai'],
+           client: {
+             mocha: {
+               ui: 'bdd'
+             }
+           },
+           browsers: [ 'PhantomJS' ],
+           singleRun: true,
+
+           preprocessors: {
+             'src/js/**/*.js': [ 'coverage' ]
+           },
+           reporters: ['dots', 'coverage'],
+           coverageReporter: {
+             type: 'text-summary'
+           }
+         },
+         createGuest: {
+           options: {
+             files: [
+               'node_modules/angular/angular.js',
+               'node_modules/angular-ui-router/release/angular-ui-router.js',
+               'node_modules/angular-mocks/angular-mocks.js',
+               'src/js/hotelier.module.js',
+               'src/js/guest.controller.js',
+               'src/js/guest.service.js',
+               'test/specs/guest.spec.service.js'
+
+             ]
+           }
          }
        }
 
@@ -103,6 +143,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'concat', 'sass' ]);
+  grunt.registerTask('default', [ 'clean', 'karma', 'jshint', 'copy', 'concat', 'sass' ]);
 };

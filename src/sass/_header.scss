@@ -1,6 +1,7 @@
 .navbar-inverse{
   background-color: $themeColor2;
   border-color: $themeColor1;
+
 }
 
 
@@ -10,6 +11,8 @@ header {
       background-image: url('../img/red-wall.jpg');
       background-size:contain;
       color: $themeColor1;
+      border-radius: 4px;
+
     }
 
 
