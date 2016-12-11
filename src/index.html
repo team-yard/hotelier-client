@@ -19,12 +19,12 @@
 
         <nav ng-controller='NavController as nav' class='navbar navbar-inverse' role="navigation">
          <ul>
-           <li><a ui-sref='home'>Home</a></li>
-           <li><a ui-sref='roomsAvailable'>Room Availability</a></li>
-           <li><a ng-if='nav.isLoggedIn()' ui-sref='guest'>Create Guest</a></li>
-           <li><a ng-if='nav.isLoggedIn()'ui-sref='createreservation'>Create Reservation</a></li>
-           <li><a ng-if='nav.isLoggedIn()'ui-sref='allRes'>Reservations</a></li>
-           <li><a ng-if='nav.isLoggedIn()'ui-sref='guestList'>Guest List</a></li>
+           <li><a class='navtheme' ui-sref='home'>Home</a></li>
+           <li><a class='navtheme' ui-sref='roomsAvailable'>Room Availability</a></li>
+           <li><a class='navtheme' ng-if='nav.isLoggedIn()' ui-sref='guest'>Create Guest</a></li>
+           <li><a class='navtheme' ng-if='nav.isLoggedIn()'ui-sref='createreservation'>Create Reservation</a></li>
+           <li><a class='navtheme' ng-if='nav.isLoggedIn()'ui-sref='allRes'>Reservations</a></li>
+           <li><a class='navtheme' ng-if='nav.isLoggedIn()'ui-sref='guestList'>Guest List</a></li>
          </ul>
        </nav>
      </header>
