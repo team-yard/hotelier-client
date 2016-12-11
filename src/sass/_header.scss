@@ -1,6 +1,6 @@
 .navbar-inverse{
-  background-color: #b0b0b6;
-  border-color: #ffffff;
+  background-color: $themeColor2;
+  border-color: $themeColor1;
 }
 
 
@@ -9,17 +9,17 @@ header {
     &.banner{
       background-image: url('../img/red-wall.jpg');
       background-size:contain;
-      color: #ffffff;
+      color: $themeColor1;
     }
 
 
     h1 {
       margin: 0;
-      padding-top: 15px;
+      padding-top: $paddingTop;
     }
 
     h2 {
-      font-size: 1em;
+      font-size: $fontSize1;
     }
 
     ul {
@@ -28,13 +28,13 @@ header {
     }
 
     a {
-      color: #A9A9A9;
+      color: $themeColor3;
     }
 
     li {
-      padding-bottom: 10px;
+      padding-bottom: $paddingBottom;
       display: inline;
-      margin-left: 5px;
+      margin-left: $headerMarginLeft;
     }
 
 }

@@ -1,13 +1,13 @@
   footer {
-  padding-top: 15px;
+  padding-top: $paddingTop;
   margin-bottom: 0;
-    color: #ffffff;
+    color: $themeColor1;
   }
   .glyphicon-envelope{
     float: right;
-    padding-right: 20px;
+    padding-right: $footerPaddingRight;
   }
 
   .login {
-    color: #ffffff;
+    color: $themeColor1;
   }
