@@ -2,7 +2,7 @@
 ul{
   &.reserve{
     margin: 0 auto;
-    width: 90%;
+    width: $reservationUlWidth;
   }
 
 
@@ -11,13 +11,13 @@ ul{
   }
 
   button{
-    color: #ee0c0c;
+    color: $themeColor4;
   }
 
   li.panel{
-    width:275px;
+    width: $reservationliWidth;
     float: left;
-    margin-left: 10px;
+    margin-left: $reservationMarginLeft;
   }
 
   button.btn{
@@ -32,6 +32,6 @@ footer{
 }
 
 h3 {
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-left: $reservationh3Margin;
+  margin-bottom: $reservationh3Margin;
 }
