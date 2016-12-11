@@ -50,7 +50,6 @@
             }
         })
         .then(function handleSuccess(response) {
-          console.log("helloooo!", response);
           return response.data;
         });
       }
