@@ -43,7 +43,7 @@
 
       function singleReservation(id) {
           return $http({
-            url: 'https://hotelier-api-yard.heroku.com/api/Reservations/' + id,
+            url: 'https://hotelier-api-yard.herokuapp.com/api/Reservations/' + id,
             method: 'GET',
             headers: {
               Authorization: LoginService.isLoggedIn(),
