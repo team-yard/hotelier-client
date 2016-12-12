@@ -8,15 +8,13 @@
 
     function SingleReservationController($stateParams, AllReservationsService) {
 
-      console.log("single res ctrl", $stateParams.id);
       var vm = this;
       this.singleReservation = {};
 
       AllReservationsService.singleReservation($stateParams.id)
         .then(function successHandler(response) {
-          console.log('single success', response);
           vm.singleReservation = response.data;
-          // $state.go('singleReservation');
+          console.log(response.data);
         })
         .catch(function failHandler(xhr){
           console.log(xhr);

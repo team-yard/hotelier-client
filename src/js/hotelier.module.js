@@ -87,7 +87,7 @@
         url: '/singleReservation/:id',
         templateUrl: 'views/single.reservation.view.template.html',
         controller: 'SingleReservationController',
-        controllerAs: 'singleReservation'
+        controllerAs: 'info'
 
       });
 
