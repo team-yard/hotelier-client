@@ -146,4 +146,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-karma');
 
   grunt.registerTask('default', [ 'clean',  'jshint', 'copy', 'concat', 'sass' ]);
+  grunt.registerTask('karma');
 };
