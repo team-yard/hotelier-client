@@ -15,7 +15,7 @@
       AllReservationsService.singleReservation($stateParams.id)
         .then(function successHandler(response) {
           console.log('single success', response);
-          vm.singleReservation = response.data;
+          vm.singleReservation = response;
           // $state.go('singleReservation');
         })
         .catch(function failHandler(xhr){
