@@ -32,7 +32,7 @@
       .state({
         name: 'login',
         url: '/staffLogin',
-        templateUrl: 'views/staffLogin.template.html',
+        templateUrl: 'views/stafflogin.template.html',
         controller: 'LoginController',
         controllerAs: 'login'
 
