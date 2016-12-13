@@ -7,7 +7,6 @@
   AllReservationsService.$inject = ['$http', 'LoginService'];
 
   function AllReservationsService($http, LoginService){
-    console.log('creating AllReservationsService');
     return {
       getReservations: getReservations,
       singleReservation: singleReservation
@@ -27,7 +26,6 @@
         }
       })
       .then(function onlyReturnData(response){
-        console.log('hello do i even get here?????', response.data);
 
         return response.data;
       });
