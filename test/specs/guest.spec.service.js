@@ -51,10 +51,14 @@
       expect(result).to.be.a('object');
       expect(result.then).to.be.a('function');
       expect(result.catch).to.be.a('function');
+      
 
       result
         .then(function(data){
           expect(data.fullName).to.equal('Syed');
+          expect(data.email).to.equal('syed@gmail.com');
+          expect(data.phone).to.equal('7031231234');
+
           doneCallback();
         })
         .catch(function(){
