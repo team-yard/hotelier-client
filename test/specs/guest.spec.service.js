@@ -7,17 +7,23 @@
     var GuestService;
     var $httpBackend;
     var $rootScope;
+    var mockLoginService = {};
 
 
     beforeEach(module('hotelier'));
 
+    beforeEach(module(function($provide) {
+      $provide.value('LoginService', mockLoginService);
+    }));
 
     beforeEach(inject(function(_$rootScope_, _$httpBackend_, _GuestService_){
       GuestService = _GuestService_;
       $httpBackend = _$httpBackend_;
       $rootScope = _$rootScope_;
 
-
+      mockLoginService.isLoggedIn = function() {
+        return 123456;
+      };
 
       $httpBackend
       .whenPost('https://hotelier-api-yard.herokuapp.com/api/Guests')
