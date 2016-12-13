@@ -21,12 +21,14 @@
       $httpBackend = _$httpBackend_;
       $rootScope = _$rootScope_;
 
+
+
       mockLoginService.isLoggedIn = function() {
         return 123456;
       };
 
       $httpBackend
-      .whenPost('https://hotelier-api-yard.herokuapp.com/api/Guests')
+      .whenPOST('https://hotelier-api-yard.herokuapp.com/api/Guests')
       .respond({
         'id': '12345',
         'fullName': 'Syed',
@@ -36,8 +38,8 @@
       });
 
       $httpBackend
-      .whenGET()
-      .respond('rertreggfsgfs');
+      .whenGET('views/guest.template.html')
+      .respond('view template');
 
 
     }));
@@ -47,12 +49,14 @@
 
       var result = GuestService.createGuest({fullName:'Syed', email:'syed@gmail.com', phone:'703-123-1234'});
       expect(result).to.be.a('object');
+      expect(result.then).to.be.a('function');
+      expect(result.catch).to.be.a('function');
 
       result
         .then(function(data){
           expect(data.fullName).to.equal('Syed');
           doneCallback();
-      })
+        })
         .catch(function(){
           doneCallback('Should not reject this promise');
         });
