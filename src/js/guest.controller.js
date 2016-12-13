@@ -14,6 +14,7 @@
       this.createGuest = function createGuest(guest) {
         console.log('what in the world am i', guest);
         GuestService.createGuest(guest);
+          // We need then and catch!!
       };
 
     }

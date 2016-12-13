@@ -17,6 +17,7 @@
        * @return {Promise}       the completed ajax call promise
        */
       function createGuest(guest) {
+        console.log('SENDING XHR');
         return $http({
           url:'https://hotelier-api-yard.herokuapp.com/api/Guests',
           data: {
@@ -30,8 +31,8 @@
             'Content-type': 'application/json'
           }
         })
-        .then(function successHandeler(reponse) {
-          return reponse;
+        .then(function successHandeler(response) {
+          return response.data;
         });
       }
     }
