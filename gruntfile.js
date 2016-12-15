@@ -124,6 +124,11 @@ module.exports = function(grunt) {
                'node_modules/angular-ui-router/release/angular-ui-router.js',
                'node_modules/angular-mocks/angular-mocks.js',
                'src/js/hotelier.module.js',
+               'src/js/login.controller.js',
+               'src/js/login.service.js',
+               'src/js/allReservations.controller.js',
+               'src/js/allReservations.service.js',
+               'test/specs/allReservations.spec.service.js',
                'src/js/rooms-available.controller.js',
                'src/js/rooms.service.js',
                'test/specs/rooms.service.spec.js'
@@ -131,6 +136,7 @@ module.exports = function(grunt) {
              ]
            }
          }
+
        }
 
 
@@ -145,5 +151,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('default', [ 'clean', 'jshint', 'karma', 'copy', 'concat', 'sass' ]);
-};
+
+  grunt.registerTask('test', ['karma']);
+
+  grunt.registerTask('default', [ 'clean', 'karma', 'jshint', 'copy', 'concat', 'sass' ]);
+
